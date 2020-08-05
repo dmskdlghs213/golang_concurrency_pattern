@@ -10,7 +10,7 @@ import (
 	"github.com/pkg/errors"
 )
 
-func APIClient() (string, error) {
+func APICall() (string, error) {
 
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*5)
 	defer cancel()

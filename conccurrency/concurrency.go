@@ -18,13 +18,11 @@ func ConccurrencyCall() (string, error) {
 		counts = append(counts, count)
 	}
 
-	fmt.Println(counts)
-
 	var msgResult string
 	switch {
 	case len(counts) < 20:
 		fmt.Println("20回以内です")
-		msg, err := Channel(counts)
+		msg, err := UseChannel(counts)
 		if err != nil {
 			return "", err
 		}
